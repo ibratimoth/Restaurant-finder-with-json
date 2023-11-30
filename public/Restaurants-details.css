@@ -1,0 +1,89 @@
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: rgb(248, 232, 211);
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header h1{
+    background-color: orange;
+    padding: 0.32rem 1.7rem;
+    border-radius: 500px 500px;
+    box-shadow: 1px 1px 2px rgb(209, 142, 18);
+}
+header h1 a{
+    text-decoration: none;
+    color: black;
+}
+header ul{
+    display: flex;
+    margin-right: 5.6rem;
+    list-style: none;
+}
+@media (max-width: 46.21rem){
+	.menu-list{
+		display: none;
+	}}
+    .menu-btn{
+        display: flex;
+        flex-direction: column;
+        width: 4rem;
+        height: 3rem;
+        justify-content: space-around;
+    }
+    .menu-btn span{
+        width: 100%;
+        height: 3px;
+        background-color: rgb(231, 182, 19);
+    }
+    @media(min-width:46.21rem){
+        .menu-btn{
+            display: none;
+        }
+    }
+header li{
+    padding: 0.8rem;
+    font-size: 23px;
+    
+}
+header a{
+    text-decoration: none;
+    color: rgb(185, 126, 14);
+    text-shadow: 1px 1px 2px rgb(212, 145, 19);
+}
+#side-drawer{
+    width: 100%;
+    height: 100%;
+    background-color:  rgb(248, 232, 211);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    }
+    #side-drawer:target{
+        display: block;
+    }
+    #side-drawer ul{
+     list-style: none;
+     margin: 0;
+     text-align: center;
+    }
+    #side-drawer li{
+     margin: 1rem 0;
+    }
+    #side-drawer a{
+     text-decoration: none;
+     color: rgb(185, 126, 14);
+     font-size: 1.5rem;
+    }
+    .first-sec p{
+        text-align: center;
+        text-shadow: 1px 1px 1px rgb(99, 18, 18);
+    }
+    .first-sec h1{
+        text-align: center;
+        color: rgb(240, 171, 45);
+        text-shadow: 1px 1px 1px rgb(173, 117, 11);
+    }

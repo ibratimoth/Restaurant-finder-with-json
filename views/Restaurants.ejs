@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Indexht</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial scale=1.0">
+	<link rel="stylesheet" type="text/css" href="Restaurants.css">
+</head>
+<body>
+	<%- include('includes/header') %>
+<main>
+    <section class="first-sec">
+		<% if (numberOfRestaurants==0) {%>
+			<p>Unfortunately, we have no restaurants yet - maybe start recommending some?</p>
+			<%} else {%>
+				<h2>Make the World a testier place!</h2>
+		<p>Share your favourite restaurants or find recommendations of other users!</p>
+		<p>We found <%=numberOfRestaurants%> restaurants</p>
+	</section>
+	<section class="second-sec">
+		<form action="/restaurants" method="GET">
+			<input type="hidden" value="<%=nextOrder%>" name="order">
+		<button id="changeorder">change order</button>
+	</form>
+		<ul>
+			<% for (const restaurant of restaurants){%>
+			<%- include('includes/restaurants/restaurant-staff',{restaurant:restaurant})%>
+			<% } %>
+		</ul>
+				<%}%>
+	</section>
+</main>
+<aside id="side-drawer">
+	<ul>
+		<li><a href="">Brows Restaurants</a></li>
+		<li><a href="Recomended.html">Share a Restaurants</a></li>
+		<li><a href="about.html">About Eatwell</a></li>
+	</ul>
+</aside>
+</body>
+</html>

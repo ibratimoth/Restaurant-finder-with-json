@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Indexht</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial scale=1.0">
+	<link rel="stylesheet" type="text/css" href="Recommended.css">
+</head>
+<body>
+    <%- include('includes/header') %>
+<main>
+    <h2>Share Your Favourite restaurant!</h2>
+    <form action="/recommend" method="post">
+        <section>
+            <ul>
+                <li>
+                    <label for="restaurantname">Restaurant name</label>
+                    <input type="text" name="name" id="restaurantname" required="">
+                </li>
+                <li>
+                    <label for="useraddress">Address</label>
+                    <input type="text" name="address" id="useraddress" required="">
+                </li>
+                <li>
+                    <label for="usernationality">Type of cuisine</label>
+                    <input type="text" name="cuisine" id="usernationality" placeholder="eg.mexican" required="">
+                </li>
+                <li>
+                    <label for="restaurantweb">Restaurant Website</label>
+                    <input type="text" name="website" id="restaurantweb" required="">
+                </li>
+                <li>
+                    <label for="userreccomend">Reccomendation</label>
+                    <textarea name="descriptions" id="userreccomend" required minlength="10" maxlength="200"></textarea>
+                </li>
+            </ul>
+            <button type="submit">Share Restaurant</button>
+        </section>
+    </form>
+</main>
+<aside id="side-drawer">
+	<ul>
+		<li><a href="/restaurants">Browse Restaurants</a></li>
+		<li><a href="">Share a Restaurants</a></li>
+		<li><a href="/about">About Eatwell</a></li>
+	</ul>
+</aside>
+</body>
+</html>

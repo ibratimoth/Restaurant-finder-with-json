@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Indexht</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial scale=1.0">
+	<link rel="stylesheet" type="text/css" href="/Restaurants-details.css">
+</head>
+<body>
+	<%- include('includes/header') %>
+<main>
+    <section class="first-sec">
+		<h1><%= restaurant.name%></h1>
+        <p><%=restaurant.cuisine%></p>
+    	<p><%=restaurant.address%></p>
+    	<p><%=restaurant.descriptions%></p>
+        <p><a href="<%= restaurant.website%>">View Website</a></p>
+	</section>
+</main>
+<aside id="side-drawer">
+	<ul>
+		<li><a href="">Brows Restaurants</a></li>
+		<li><a href="Recomended.html">Share a Restaurants</a></li>
+		<li><a href="about.html">About Eatwell</a></li>
+	</ul>
+</aside>
+</body>
+</html>
